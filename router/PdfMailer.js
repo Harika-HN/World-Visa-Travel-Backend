@@ -19,17 +19,17 @@ function validateInput(req, res, next) {
 }
 
 // Promisified version of pdf.create
-function createPdf(htmlContent, pdfOptions) {
-  return new Promise((resolve, reject) => {
-    pdf.create(htmlContent, pdfOptions).toFile("generated.pdf", (err, pdfRes) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(pdfRes.filename);
-      }
-    });
-  });
-}
+// function createPdf(htmlContent, pdfOptions) {
+//   return new Promise((resolve, reject) => {
+//     pdf.create(htmlContent, pdfOptions).toFile("generated.pdf", (err, pdfRes) => {
+//       if (err) {
+//         reject(err);
+//       } else {
+//         resolve(pdfRes.filename);
+//       }
+//     });
+//   });
+// }
 
 // Promisified version of fs.readFileSync
 function readPdfFile(filename) {
